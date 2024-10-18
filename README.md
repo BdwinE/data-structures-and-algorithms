@@ -1,4 +1,4 @@
-# data-structures-and-algorithms
+# Data Structures and Algorithms
 This repo is aimed at displaying and deepening my understanding of Data Structures and Algorithms. 
 It serves as both a personal learning resource and a showcase of my progress and understanding of fundamental computer science concepts. 
 Here, you will find a collection of implementations, practice problems, and notes on various data structures and algorithms, ranging from the basics to more advanced topics.
