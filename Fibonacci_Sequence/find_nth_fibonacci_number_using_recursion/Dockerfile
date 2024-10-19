@@ -2,14 +2,12 @@ FROM node
 
 WORKDIR /app
 
-COPY package.json /app
-
-RUN npm install
-
 COPY . /app
+
+RUN npm install -g nodemon
 
 #used to insure that the node_modules file is not 
 #overwritten when container is ran with a bind mount
 VOLUME [ "/app/node_modules" ]
 
-CMD ["npm", "start"]
+CMD [ "nodemon", "-L", "find_nth_fibonacci_number.js" ]
