@@ -26,58 +26,58 @@ number in the list is pushed to the end.
 
 ### 1st iteration
 
-list = 4 25 3 65 0
+list = 4 25 3 65 0  
 is 4 > 25 => no, don't swap
 
-list = 4 25 3 65 0
+list = 4 25 3 65 0  
 is 25 > 3 => yes, swap 25 and 3
 
-list = 4 3 25 65 0
+list = 4 3 25 65 0  
 is 25 > 65 => no, don't swap
 
-list = 4 3 25 65 0
+list = 4 3 25 65 0  
 is 65 > 0 => yes, swap 65 and 0
 
 ### 2nd iteration
 
-list = 4 3 25 0 65
+list = 4 3 25 0 65  
 is 4 > 3 => yes, swap 4 and 3
 
-list = 3 4 25 0 65
+list = 3 4 25 0 65  
 is 4 > 25 => no, don't swap
 
-list = 3 4 25 0 65
+list = 3 4 25 0 65  
 is 25 > 0 => yes, swap 25 and 0
 
-list = 3 4 0 25 65
+list = 3 4 0 25 65  
 is 25 > 65 => no, don't swap
 
 ### 3rd iteration
 
-list = 3 4 0 25 65
+list = 3 4 0 25 65  
 is 3 > 4 => no, don't swap
 
-list = 3 4 0 25 65
+list = 3 4 0 25 65  
 is 4 > 0 => yes, swap 4 and 0
 
-list = 3 0 4 25 65
+list = 3 0 4 25 65  
 is 4 > 25 => no, don't swap
 
-list = 3 0 4 25 65
+list = 3 0 4 25 65  
 is 25 > 65 => no, don't swap
 
 ### 4th iteration
 
-list = 3 0 4 25 65
+list = 3 0 4 25 65  
 is 3 > 0 => yes, swap 3 and 0
 
-list = 0 3 4 25 65
+list = 0 3 4 25 65  
 is 3 > 4 => no, don't swap
 
-list = 0 3 4 25 65
+list = 0 3 4 25 65  
 is 4 > 25 => no, don't swap
 
-list = 0 3 4 25 65
+list = 0 3 4 25 65  
 is 25 > 65 => no, don't swap
 
 ## Improvement
@@ -125,5 +125,5 @@ O(n).
 ### Improved Algorithm Average case
 
 Assuming on average it take n/2 iterations to sort any given list then
-we would have $((n-1)/2)*(n-1) = (1/2)n^2-n+1$. This can be reduced to n^2 in respects to time complexity.
+we would have $((n-1)/2)*(n-1) = (1/2)n^2-n+1$. This can be reduced to n^2 in respects to time complexity.  
 So the average case would still be O(n^2)
