@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN javac InsertionSort.java
+RUN javac QuickSort.java
 
-CMD [ "java", "InsertionSort" ]
+CMD [ "java", "QuickSort" ]

@@ -11,10 +11,10 @@ Quick Sort is a divide and conquer algorithm which picks a pivot point and then 
 2. Go through the list and put values lower than the pivot below the pivot and values higher than the pivot ahead
 
    - one way to do this would be to
-     1. have a pointer(lets call it j and it's initial value is -1) where values to left(inclusive) of it are less than pivot value
+     1. have a pointer(lets call it j and it's value is startIndex-1) where values to left(inclusive) of it are less than pivot value
      2. go through the list(excluding last value) and compare the pivot value to current value
         - if current value is less than pivot value swap current value with value at index j+1 and increment j
-     3. once this is done swap pivot value and the value in pointer
+     3. once this is done swap pivot value and the value in pointer+1
 
 3. Create two sub list, one list being values to the left of the pivot and the other values to the right of the pivot.
 

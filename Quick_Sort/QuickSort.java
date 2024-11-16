@@ -1,20 +1,38 @@
-public class InsertionSort{
-  public static void main(String args[]){
-    int[] list = {4,25,3,5,2,1,6};
+public class QuickSort {
+    public static int[] list = {4,25,3,5,2,1,6};
+    public static void main(String[] args) {
         
-    int currSortedIndex;
-    int currentValue;
-    for(int sortedEnd=0; sortedEnd<list.length-1; sortedEnd++){
-        currentValue = list[sortedEnd+1];
-        currSortedIndex = sortedEnd;
-        while(currSortedIndex>=0 && list[currSortedIndex]>currentValue){
-            list[currSortedIndex+1] = list[currSortedIndex];
-            currSortedIndex--;
+        quickSort(0, list.length-1);
+        
+        for(int num:list){
+            System.out.print(num + " "); 
         }
-        list[currSortedIndex+1] = currentValue;
+        System.out.println();
     }
-    for(int num: list){
-        System.out.print(num+" ");
+    
+    public static void quickSort(int start, int end){
+        if(end-start<=0)
+            return;
+        int pivotIndex = partition(start, end);
+        quickSort(start, pivotIndex-1);
+        quickSort(pivotIndex+1, end);
     }
-  }
+    public static int partition(int start, int end){
+        
+        int pivot = list[end];
+        int pointer = start-1;
+        int temp;
+        for(int i=start; i<end; i++){
+            if(list[i]<pivot){
+                temp = list[i];
+                list[i] = list[++pointer];
+                list[pointer] = temp;
+            }
+        }
+        
+        list[end] = list[++pointer];
+        list[pointer] = pivot;
+        
+        return pointer;
+    }
 }
