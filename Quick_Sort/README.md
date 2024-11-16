@@ -77,12 +77,12 @@ sub_list.length is less than or equal to 1 so return
 
 ## Time Complexity
 
-Notice in the example above, we start with an initial call and then that call makes 2 recursive calls. each subsequent call divides the list, assuming that it divides the list in half(average case) we would have $n+n/2+n/4+n/8+...$ until sub $n=1$ to get "until sub $n=1$" we know the general formula of a layer is $n/2^k$ with k being the layer. and since we want to know what this is when sub $n=1$ we have $n/2^k = 1$ using log rules $=> n = 2^k => k=log[2](n)$.
+Notice in the example above, we start with an initial call and then that call makes 2 recursive calls. each subsequent call divides the list, assuming that it divides the list in half(average case) we would have $n+n/2+n/4+n/8+...$ until sub $n=1$ to get "until sub $n=1$" we know the general formula of a layer is $n/2^k$ with k being the layer. and since we want to know what this is when sub $n=1$ we have $n/2^k = 1$ using log rules $=> n = 2^k => k=log2(n)$.
 
 So to go down one path of the recursion we have $n+n/2+n/4+n/8+...+n/2$<sup>log2(n)</sup> but we don't care about just one path we care about all the paths.
 
 Something we left out in the original formal is the two recursion call each call makes. If we include that we'll have the formula
-$n+2(n/2)+4(n/4)+8(n/8)+...+$ log2(n)\*n/2<sup>log2(n)</sup> => $n+n+n+n+...$ until the kth n; and since $k = log2(n)$ this means we do n, $log2(n)$ times => $n*log2(n)$.
+$n+2(n/2)+4(n/4)+8(n/8)+...+$ $log2(n)*n/2$<sup>log2(n)</sup> => $n+n+n+n+...$ until the kth n; and since $k = log2(n)$ this means we do n, $log2(n)$ times => $n*log2(n)$.
 
 So we derive that the bigO of quicksort in the average case is $n*log2(n)$
 
