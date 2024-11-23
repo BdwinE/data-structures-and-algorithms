@@ -43,20 +43,20 @@ array = [0,0,0,0,0,0]
 list = 4 1 3 5 1 4 4
 
 k = 5
-array = [0,2,0,1,2,1]
+array = [0,2,0,1,3,1]
 
 ### Step 4
 
 ### 1st iteration
 
 list =  
-array = [<ins>0</ins>,2,0,1,2,1]
+array = [<ins>0</ins>,2,0,1,3,1]
 there are 0 0's so do nothing
 
 ### 2nd iteration
 
 list =  
-array = [0,<ins>2</ins>,0,1,2,1]  
+array = [0,<ins>2</ins>,0,1,3,1]  
 there are 2 1's so add 1 to list twice
 list = 1
 list = 1 1
@@ -64,28 +64,28 @@ list = 1 1
 ### 3rd iteration
 
 list = 1 1  
-array = [0,2,<ins>0</ins>,1,2,1]  
+array = [0,2,<ins>0</ins>,1,3,1]  
 there are 0 2's so do nothing
 
 ### 4th iteration
 
 list = 1 1
-array = [0,2,0,<ins>1</ins>,2,1]  
+array = [0,2,0,<ins>1</ins>,3,1]  
 there is 1 3 so add 3 to list
 list = 1 1 3
 
 ### 6th iteration
 
 list = 1 1 3
-array = [0,2,0,1,<ins>2</ins>,1]  
+array = [0,2,0,1,<ins>3</ins>,1]  
 there are 2 4's so add 4 to list twice
 list = 1 1 3 4
-list = 1 1 3 4 4
+list = 1 1 3 4 4 4
 
 ### 6th iteration
 
 list = 1 1 3
-array = [0,2,0,1,2,<ins>1</ins>]  
+array = [0,2,0,1,3,<ins>1</ins>]  
 there is 1 5 so add 5 to list
 list = 1 1 3 4 4 5
 
